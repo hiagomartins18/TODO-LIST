@@ -1,0 +1,261 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap");
+
+/*========== Reset CSS ==========*/
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Josefin Sans";
+  font: inherit;
+}
+img,
+picture,
+svg,
+video {
+  display: block;
+  max-width: 100%;
+}
+a {
+  text-decoration: none;
+}
+body {
+  min-height: 100vh;
+  background-image: url(./images/bg-desktop-light.jpg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: top;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+/*========== Variables ==========*/
+:root {
+  /*===== Light Theme =====*/
+  --very-light-gray: hsl(0, 0%, 98%);
+  --very-light-grayish-blue: hsl(236, 33%, 92%);
+  --light-grayish-blue: hsl(233, 11%, 84%);
+  --dark-grayish-blue: hsl(236, 9%, 61%);
+  --very-dark-grayish-blue2: hsl(235, 19%, 35%);
+
+  /*===== Dark Theme =====*/
+  --very-dark-blue: hsl(235, 21%, 11%);
+  --very-dark-desatured-blue: hsl(236, 33%, 92%);
+  --light-grayish-blue: hsl(234, 39%, 85%);
+  --light-grayish-bluehover: hsl(236, 33%, 92%);
+  --dark-grayish-bluye: hsl(234, 11%, 52%);
+  --very-dark-grayish-blue: hsl(233, 14%, 35%);
+}
+
+/*========== CSS Normal ===========*/
+.container {
+  width: 36rem;
+  margin-top: 5.45rem;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 2.5rem;
+}
+
+header > h1 {
+  font-size: 2.7rem;
+  font-weight: 700;
+  font-family: "Josefin Sans";
+  color: white;
+  letter-spacing: 1rem;
+}
+
+.todo > form > input {
+  width: 100%;
+  padding: 1.6rem;
+  border: 0;
+  outline: 0;
+  border-radius: 5px;
+  font-size: 1.125rem;
+  font-family: "Josefin Sans";
+}
+
+.todo > form > .create {
+  outline: 3px solid red;
+}
+
+.todo-list {
+  width: 100%;
+  background-color: white;
+  margin-top: 2rem;
+  border-radius: 5px;
+  box-shadow: 1px 23px 49px -18px gray;
+}
+
+.todo-content .todo-li {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  border-bottom: 1px solid rgb(195, 195, 195);
+  padding: 1.6rem;
+  font-size: 1.125rem;
+  color: var(--very-dark-grayish-blue);
+  font-weight: 400;
+  font-family: "Josefin Sans";
+  position: relative;
+}
+.todo-li > p {
+  margin-left: 2.18rem;
+}
+.check {
+  position: absolute;
+  cursor: pointer;
+  border: 1px solid gray;
+  border-radius: 20%;
+  padding: 0.25rem;
+}
+
+
+.completed {
+  background-color: violet;
+  border-radius: 20%;
+}
+
+.addline {
+  text-decoration: line-through;
+  color: rgb(197, 197, 197);
+}
+
+.close {
+  display: none;
+  cursor: pointer;
+}
+
+.todo-li:hover .close {
+  display: block;
+}
+
+.todo-infos {
+  width: 100%;
+}
+.info-content {
+  display: flex;
+  justify-content: space-between;
+  font-family: "Josefin Sans";
+  padding-top: 0.9rem;
+  padding-bottom: 0.9rem;
+  padding-left: 1.6rem;
+  padding-right: 1.6rem;
+  font-size: 0.9rem;
+}
+.info-options {
+  display: flex;
+  gap: 0.75rem;
+}
+.info-options a {
+  text-decoration: none;
+  color: black;
+}
+.info-clear a,
+.info-linumb p {
+  color: rgb(195, 195, 195);
+}
+.info-clear a:hover {
+  color: gray;
+}
+
+
+dialog {
+  background-color: white;
+  border-radius: 5px;
+  border: none;
+  padding: 1.875rem;
+  font-family: "Josefin Sans";
+  font-size: 1.25rem;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 1rem black;
+}
+
+.dialog{
+  display: flex;
+  align-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.56rem;
+}
+
+.dialog > img {
+  width: 6.25rem;
+  height: 6.25rem;
+  text-align: center;
+}
+
+.dialog > button{
+  border: 0;
+  outline: 0;
+  width: 100%;
+  color: white;
+  background-color: red;
+  padding: 0.5rem;
+  border-radius: 5px;
+}
+
+
+/* ==========  Dark Mode ========== */
+.dark-btn{
+  cursor: pointer;
+}
+body.dark{
+  background-color: var(--very-dark-blue);
+  background-image: url(./images/bg-desktop-dark.jpg);
+}
+body.dark .todo > form > input{
+  background-color: var(--very-dark-grayish-blue2);
+  color: var(--very-dark-desatured-blue);
+}
+body.dark .todo-list{
+  background-color: var(--very-dark-grayish-blue2);
+}
+body.dark .todo-list .todo-li > p{
+  color: var(--very-dark-desatured-blue);
+}
+body.dark .todo-list .todo-li .check > img{
+  opacity: 0;
+} 
+body.dark .todo-list .todo-li .check.completed > img{
+  opacity: 1;
+}
+body.dark .todo-list{
+  box-shadow: 1px 23px 49px -18px rgb(59, 59, 59);
+}
+body.dark .close img{
+  filter: brightness(0);
+}
+
+
+
+
+/* ==========  Responsividade ========== */
+
+@media (max-width: 765px){
+  html{
+    font-size: 85%;
+  }
+}
+@media (max-width: 576px){
+  body{
+    background-image: url(./images/bg-mobile-light.jpg);
+  }
+  body.dark{
+    background-image: url(./images/bg-mobile-dark.jpg);
+  }
+  .close > img{
+    width: 83%;
+    height: 83%;
+  }
+}

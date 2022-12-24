@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="style.css" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Todo App</title>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>TODO</h1>
+        <div class="dark-btn"><img src="./images/icon-moon.svg" alt=""/></div>
+      </header>
+      <div class="todo">
+        <form>
+          <input
+            type="text"
+            name=""
+            placeholder="Criar um novo TODO..."
+          />
+        </form>
+        <div class="todo-list">
+          <div class="todo-content">
+  
+          </div>
+          <div class="todo-infos">
+            <div class="info-content">
+              <div class="info-linumb">
+                <p><span class="variable"></span> items left</p>
+              </div>
+              <div class="info-clear">
+                <a href="">Clear All</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <dialog>
+      <div class="dialog">
+        <img src="./images/alert.svg" alt="">
+        <p>Você precisa adcionar um valor, burro!</p>
+        <button class="btnModal">Ok</button>
+      </div>
+    </dialog>
+
+    <dialog class="dialog2">
+      <div class="dialog">
+        <img src="./images/alert.svg" alt="">
+        <p>Limite Atingido.</p>
+        <button class="btnModal2">Ok</button>
+      </div>
+    </dialog>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
